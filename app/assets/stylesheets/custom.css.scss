@@ -4,6 +4,7 @@
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
+$bitchin-baby-blue: #e5ffff;
 
 /* universal */
 
@@ -66,7 +67,7 @@ p {
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: white;
+    color: $bitchin-baby-blue;
     text-decoration: none;
   }
 }
