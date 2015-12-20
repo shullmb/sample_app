@@ -1,0 +1,10 @@
+<% provide :title, "Profile" %>
+
+<h1>
+  <%= gravatar_for @user %>
+  <%= @user.name %>
+</h1>
+
+
+
+<%= @user.name %>, <%= @user.email %>
