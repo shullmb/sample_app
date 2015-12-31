@@ -11,6 +11,13 @@ module SessionsHelper
     @current_user = nil
   end
 
+  # remembers a user in a persistent session
+  def remember user
+    user.remember
+    cookies.permanent.signed[:user_id] = user.id
+    cookies.permanent[:remember_token] = user.remember_token
+  end
+
   # returns current session user if logged in
   def current_user
     @current_user ||= User.find_by(id: session[:user_id])
