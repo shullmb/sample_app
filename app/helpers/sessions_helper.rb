@@ -26,7 +26,6 @@ module SessionsHelper
     @current_user = nil
   end
 
-
   # returns current session user if logged in
   def current_user
     if (user_id = session[:user_id])
@@ -38,6 +37,11 @@ module SessionsHelper
         @current_user = user
       end
     end
+  end
+
+  # returns true if given user is current_user
+  def current_user? user
+    user == current_user
   end
 
   # returns true if user is logged in
