@@ -2,11 +2,13 @@ mike:
   name: Mike Admin
   email: mike@localhost.com
   password_digest: <%= User.digest 'password' %>
+  admin: true
 
 fourchan:
   name: Hacker Namedfourchan
   email: hacker@fake_chan.org
   password_digest: <%= User.digest 'password' %>
+  admin: false
 
 archer:
   name: Sterling Archer
